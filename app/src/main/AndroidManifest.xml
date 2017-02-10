@@ -18,6 +18,8 @@
         <activity android:name=".tab.MainTabActivity"/>
         <activity android:name=".imageview.ImageViewActivity"/>
         <activity android:name=".toolbar.ToolbarActivity"/>
+        <activity android:name=".itemview.ItemViewActivity" />
+
     </application>
 
 </manifest>

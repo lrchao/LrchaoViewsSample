@@ -4,7 +4,7 @@
        android:layout_height="wrap_content"
     >
 
-    <com.lrchao.views.scrollview.MyScrollView
+    <com.lrchao.views.imageview.MyCircleImageView
         android:id="@+id/iv_icon"
         android:layout_width="@dimen/item_icon_diameter"
         android:layout_height="@dimen/item_icon_diameter"/>

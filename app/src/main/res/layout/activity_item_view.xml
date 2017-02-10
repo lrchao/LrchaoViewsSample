@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/activity_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.lrchao.views.itemview.CircleIconTitleDescArrowItemView
+            android:id="@+id/itemview_circle_icon_title_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.ConversationItemView
+            android:id="@+id/itemview_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.EditIconItemLayout
+            android:id="@+id/edit_icon_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.EditTextItemLayout
+            android:id="@+id/edit_text_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.TextItemLayout
+            android:id="@+id/text_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.IconTextItemLayout
+            android:id="@+id/icon_text_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <com.lrchao.views.itemview.ItemGroupLayout
+            android:id="@+id/item_group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</ScrollView>
