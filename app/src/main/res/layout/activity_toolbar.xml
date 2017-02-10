@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_toolbar"
+    xmlns:JiaToolBar="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.lrchao.views.toolbar.LrchaoToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        JiaToolBar:background_color="@color/colorPrimary"
+        JiaToolBar:center_title_color="@color/colorAccent"
+        JiaToolBar:center_title_size="@dimen/default_text_size"
+        JiaToolBar:center_title_text="Toolbar11"
+        JiaToolBar:navigation_icon="@drawable/ab_share"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar11"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/add_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加 1"/>
+
+        <Button
+            android:id="@+id/add_double"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="两位数字"/>
+
+    </LinearLayout>
+</LinearLayout>

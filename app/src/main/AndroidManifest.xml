@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".tab.MainTabActivity"/>
-        <activity android:name=".imageview.ImageViewActivity">
-        </activity>
+        <activity android:name=".imageview.ImageViewActivity"/>
+        <activity android:name=".toolbar.ToolbarActivity"/>
     </application>
 
 </manifest>

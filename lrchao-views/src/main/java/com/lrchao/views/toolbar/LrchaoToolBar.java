@@ -122,7 +122,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
         LayoutInflater.from(context).inflate(R.layout.toolbar_lrchao, this);
         setOrientation(HORIZONTAL);
         mTvCenterTitle = (TextView) findViewById(R.id.toolbar_center_title);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         mToolbar.setTitle("");
 
         // Toolbar处理顺序 不能换

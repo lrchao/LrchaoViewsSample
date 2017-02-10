@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.tab.MainTabActivity;
+import com.lrchao.lrchaoviewssample.toolbar.ToolbarActivity;
 import com.lrchao.views.LrchaoViews;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LrchaoViews.getInstance().init(this);
         findViewById(R.id.btn_tab).setOnClickListener(this);
         findViewById(R.id.btn_image_view).setOnClickListener(this);
+        findViewById(R.id.btn_toolbar).setOnClickListener(this);
 
     }
 
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_image_view:
                 startActivity(new Intent(this, ImageViewActivity.class));
+                break;
+            case R.id.btn_toolbar:
+                startActivity(new Intent(this, ToolbarActivity.class));
                 break;
             default:
                 break;

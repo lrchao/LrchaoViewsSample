@@ -36,5 +36,12 @@
             android:text="ImageView"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 </ScrollView>
