@@ -9,6 +9,14 @@ android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
 
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'third_party']
+            res.srcDirs = ['src/main/res']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     defaultConfig {
         minSdkVersion 18
         targetSdkVersion 24
