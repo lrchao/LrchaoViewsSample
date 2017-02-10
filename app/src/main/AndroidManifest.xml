@@ -2,6 +2,8 @@
 <manifest package="com.lrchao.lrchaoviewssample"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +21,7 @@
         <activity android:name=".imageview.ImageViewActivity"/>
         <activity android:name=".toolbar.ToolbarActivity"/>
         <activity android:name=".itemview.ItemViewActivity" />
+        <activity android:name=".webview.WebViewActivity"/>
 
     </application>
 
