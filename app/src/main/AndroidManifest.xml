@@ -22,6 +22,7 @@
         <activity android:name=".toolbar.ToolbarActivity"/>
         <activity android:name=".itemview.ItemViewActivity" />
         <activity android:name=".webview.WebViewActivity"/>
+        <activity android:name=".progressbar.ProgressbarActivity"/>
 
     </application>
 

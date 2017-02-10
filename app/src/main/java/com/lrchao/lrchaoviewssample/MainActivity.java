@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.itemview.ItemViewActivity;
+import com.lrchao.lrchaoviewssample.progressbar.ProgressbarActivity;
 import com.lrchao.lrchaoviewssample.tab.MainTabActivity;
 import com.lrchao.lrchaoviewssample.toolbar.ToolbarActivity;
 import com.lrchao.lrchaoviewssample.webview.WebViewActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_toolbar).setOnClickListener(this);
         findViewById(R.id.btn_itemview).setOnClickListener(this);
         findViewById(R.id.btn_webview).setOnClickListener(this);
+        findViewById(R.id.btn_progressbar).setOnClickListener(this);
 
     }
 
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_webview:
                 startActivity(new Intent(this, WebViewActivity.class));
+                break;
+            case R.id.btn_progressbar:
+                startActivity(new Intent(this, ProgressbarActivity.class));
                 break;
             default:
                 break;

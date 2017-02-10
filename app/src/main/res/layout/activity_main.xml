@@ -56,5 +56,12 @@
             android:text="WebView"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ProgressBar"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 </ScrollView>
