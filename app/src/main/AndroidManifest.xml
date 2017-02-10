@@ -15,8 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".tab.MainTabActivity"/>
+        <activity android:name=".imageview.ImageViewActivity">
+        </activity>
     </application>
 
 </manifest>
