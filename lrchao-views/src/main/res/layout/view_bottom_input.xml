@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="17dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        />
+
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/et_bg"
+        android:gravity="top|left"
+        android:hint="@string/hint_input_bottom_msg"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_add_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bottom_view_add_pic_not_show"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_view_submit_clickable"
+            android:text="@string/bottom_input_submit"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <com.lrchao.views.gridview.add_pic.AddPicGridView
+        android:id="@+id/grid_view_add_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="28dp"/>
+
+
+</merge>

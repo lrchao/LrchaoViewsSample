@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- 未读的红点直径 -->
+    <dimen name="unread_point_diameter">7dp</dimen>
+
+    <!-- image view-->
+    <dimen name="item_icon_diameter">44dp</dimen>
+
+    <!-- text -->
+    <dimen name="text_title_font">16sp</dimen>
+    <dimen name="text_content_font">14sp</dimen>
+    <dimen name="text_desc_font">12sp</dimen>
+
+    <!-- arrow -->
+    <dimen name="arrow_right_w">8dp</dimen>
+    <dimen name="arrow_right_h">12dp</dimen>
+
+    <!-- ListView -->
+    <dimen name="index_bar_letter_text">10sp</dimen>
+
+</resources>

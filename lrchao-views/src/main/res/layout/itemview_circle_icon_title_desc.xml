@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    >
+
+    <com.lrchao.views.imageview.MyCircleImageView
+        android:id="@id/iv_icon"
+        android:layout_width="@dimen/item_icon_diameter"
+        android:layout_height="@dimen/item_icon_diameter"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_title_font"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/text_desc"
+            android:textSize="@dimen/text_desc_font"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/iv_red_point"
+        style="@style/RedPointOnItem"
+        />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right"
+        style="@style/ArrowRightOnItem"
+        />
+
+
+</merge>

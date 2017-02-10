@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="iv_icon" type="id"/>
+    <item name="tv_title" type="id"/>
+    <item name="tv_hint" type="id"/>
+    <item name="tv_content" type="id"/>
+    <item name="iv_red_point" type="id"/>
+    <item name="iv_arrow_right" type="id"/>
+    <item name="tv_unread_number" type="id"/>
+
+    <!-- menu -->
+    <item name="tv_menu_title" type="id"/>
+    <item name="tv_menu_content" type="id"/>
+    <item name="v_menu_bottom_line" type="id"/>
+    <item name="v_menu_right_line" type="id"/>
+    <item name="iv_menu_icon" type="id"/>
+
+    <!-- grid view -->
+    <item name="fix_gridview" type="id"/>
+    <item name="iv_grid_item_icon" type="id"/>
+    <item name="iv_grid_item_close" type="id"/>
+</resources>

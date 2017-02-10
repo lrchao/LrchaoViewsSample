@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- divider -->
+    <color name="divider_line">#E5E5E5</color> <!-- 分割线 -->
+
+    <!-- text -->
+    <color name="text_title">#333333</color> <!-- 标题 -->
+    <color name="text_desc">#999999</color> <!-- 描述 -->
+    <color name="text_content">#666666</color> <!-- 内容 -->
+    <color name="text_hint">#CCCCCC</color> <!-- hint -->
+    <!-- unread point -->
+    <color name="unread_point">#EC3B43</color> <!-- 未读数量颜色 -->
+
+    <!-- ListView -->
+    <color name="index_bar_letter_nor">#999999</color>
+    <color name="index_bar_letter_sel">#D84E4E</color>
+
+    <color name="et_bg_border">#DDDDDD</color>
+    <color name="bottom_input_bg">#F2F2F2</color>
+    <color name="bottom_input_submit_clickable_bg">#FFAE00</color>
+    <color name="bottom_input_submit_un_clickable_bg">#CCCCCC</color>
+
+
+</resources>

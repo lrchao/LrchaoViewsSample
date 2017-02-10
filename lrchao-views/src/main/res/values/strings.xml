@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Views</string>
+
+    <string name="hint_input_msg">请输入信息</string>
+
+    <string name="hint_input_bottom_msg">请输入回复内容···</string>
+
+    <string name="bottom_input_submit">提交</string>
 </resources>

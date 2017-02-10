@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@id/iv_icon"
+        android:layout_width="@dimen/item_icon_diameter"
+        android:layout_height="@dimen/item_icon_diameter"/>
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:lines="1"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_title_font"
+        />
+
+    <!-- 箭头 -->
+    <ImageView
+        android:id="@id/iv_arrow_right"
+        style="@style/ArrowRightOnItem"
+        />
+</merge>
+
