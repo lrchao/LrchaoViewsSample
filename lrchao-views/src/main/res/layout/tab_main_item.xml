@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+    <!-- tab 图片 -->
+    <ImageView
+        android:id="@+id/iv_tab_img"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        />
+
+    <!-- tab 文本-->
+    <TextView
+        android:id="@+id/tv_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_tab_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_tab_notice_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_tab_text"
+        android:background="@drawable/main_tab_ic_remind"
+        android:gravity="center"
+        android:maxLength="2"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/iv_tab_img"
+        android:layout_alignTop="@id/iv_tab_img"
+        android:src="@drawable/notice_tab"/>
+
+</merge>
