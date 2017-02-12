@@ -25,6 +25,8 @@
         <activity android:name=".progressbar.ProgressbarActivity"/>
         <activity android:name=".progressbar.PageLoadingActivity">
         </activity>
+        <activity android:name=".swipe.SwipeRefreshActivity">
+        </activity>
     </application>
 
 </manifest>

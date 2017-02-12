@@ -21,6 +21,12 @@
     <color name="bottom_input_submit_clickable_bg">#FFAE00</color>
     <color name="bottom_input_submit_un_clickable_bg">#CCCCCC</color>
 
+    <!-- swipe refresh -->
+    <color name="swipe_refresh_red">#FFC93437</color>
+    <color name="swipe_refresh_blue">#FF375BF1</color>
+    <color name="swipe_refresh_yellow">#ffae00</color>
+    <color name="swipe_refresh_green">#FF34A350</color>
+
     <!-- gray -->
     <color name="gray_666666">#666666</color>
 

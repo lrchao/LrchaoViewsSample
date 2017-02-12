@@ -70,5 +70,12 @@
             android:text="PageLoading"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_swipe_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SwipeRefresh"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 </ScrollView>

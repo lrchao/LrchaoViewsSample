@@ -9,6 +9,7 @@ import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.itemview.ItemViewActivity;
 import com.lrchao.lrchaoviewssample.progressbar.PageLoadingActivity;
 import com.lrchao.lrchaoviewssample.progressbar.ProgressbarActivity;
+import com.lrchao.lrchaoviewssample.swipe.SwipeRefreshActivity;
 import com.lrchao.lrchaoviewssample.tab.MainTabActivity;
 import com.lrchao.lrchaoviewssample.toolbar.ToolbarActivity;
 import com.lrchao.lrchaoviewssample.webview.WebViewActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_webview).setOnClickListener(this);
         findViewById(R.id.btn_progressbar).setOnClickListener(this);
         findViewById(R.id.btn_page_loading).setOnClickListener(this);
+        findViewById(R.id.btn_swipe_refresh).setOnClickListener(this);
 
 
     }
@@ -54,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_page_loading:
                 startActivity(new Intent(this, PageLoadingActivity.class));
+                break;
+            case R.id.btn_swipe_refresh:
+                startActivity(new Intent(this, SwipeRefreshActivity.class));
                 break;
             default:
                 break;
