@@ -20,10 +20,11 @@
         <activity android:name=".tab.MainTabActivity"/>
         <activity android:name=".imageview.ImageViewActivity"/>
         <activity android:name=".toolbar.ToolbarActivity"/>
-        <activity android:name=".itemview.ItemViewActivity" />
+        <activity android:name=".itemview.ItemViewActivity"/>
         <activity android:name=".webview.WebViewActivity"/>
         <activity android:name=".progressbar.ProgressbarActivity"/>
-
+        <activity android:name=".progressbar.PageLoadingActivity">
+        </activity>
     </application>
 
 </manifest>

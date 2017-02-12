@@ -21,5 +21,15 @@
     <color name="bottom_input_submit_clickable_bg">#FFAE00</color>
     <color name="bottom_input_submit_un_clickable_bg">#CCCCCC</color>
 
+    <!-- gray -->
+    <color name="gray_666666">#666666</color>
+
+    <!-- red -->
+    <color name="red_D23F3F">#D23F3F</color>
+    <color name="red_B72525">#B72525</color>
+
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+
 
 </resources>

@@ -1,5 +1,8 @@
 <resources>
 
+
+    <dimen name="font_normal">14sp</dimen>
+
     <!-- 未读的红点直径 -->
     <dimen name="unread_point_diameter">7dp</dimen>
 
