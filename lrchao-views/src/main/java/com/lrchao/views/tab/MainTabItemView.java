@@ -64,6 +64,16 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
     private int mTextColorChecked;
 
     /**
+     * 未选的背景颜色
+     */
+    private int mBgColorNormal;
+
+    /**
+     * 选中的背景颜色
+     */
+    private int mBgColorChecked;
+
+    /**
      * 监听接口
      */
     private OnMainTabItemViewClickListener mOnMainTabItemClickListener;
@@ -95,7 +105,9 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
                          @DrawableRes int iconChecked,
                          @StringRes int text,
                          @ColorRes int textColorNormal,
-                         @ColorRes int textColorChecked) {
+                         @ColorRes int textColorChecked,
+                         @ColorRes int bgColorNormal,
+                         @ColorRes int bgColorChecked) {
         mIvIcon.setImageResource(iconNormal);
         mTvName.setText(text);
         mTvName.setTextColor(ResourceUtils.getColor(textColorNormal));
@@ -103,6 +115,8 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
         mIconChecked = iconChecked;
         mTextColorNormal = textColorNormal;
         mTextColorChecked = textColorChecked;
+        mBgColorNormal = bgColorNormal;
+        mBgColorChecked = bgColorChecked;
     }
 
     /**
@@ -176,11 +190,13 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
     private void checkStatus() {
         mIvIcon.setImageResource(mIconChecked);
         mTvName.setTextColor(ResourceUtils.getColor(mTextColorChecked));
+        setBackgroundResource(mBgColorChecked);
     }
 
     public void uncheckedStatus() {
         mIvIcon.setImageResource(mIconNormal);
         mTvName.setTextColor(ResourceUtils.getColor(mTextColorNormal));
+        setBackgroundResource(mBgColorNormal);
     }
 
     public interface OnMainTabItemViewClickListener {

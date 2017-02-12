@@ -52,9 +52,17 @@ public class MainTabLayout extends LinearLayout implements MainTabItemView.OnMai
                         @DrawableRes int iconChecked,
                         @StringRes int text,
                         @ColorRes int textColorNormal,
-                        @ColorRes int textColorChecked) {
+                        @ColorRes int textColorChecked,
+                        @ColorRes int bgColorNormal,
+                        @ColorRes int bgColorChecked) {
         MainTabItemView itemView = new MainTabItemView(getContext());
-        itemView.bindView(iconNormal, iconChecked, text, textColorNormal, textColorChecked);
+        itemView.bindView(iconNormal,
+                iconChecked,
+                text,
+                textColorNormal,
+                textColorChecked,
+                bgColorNormal,
+                bgColorChecked);
         itemView.setOnMainTabItemClickListener(this);
         addView(itemView, mLayoutParams);
     }

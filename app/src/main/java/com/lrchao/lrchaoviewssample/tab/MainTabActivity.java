@@ -18,10 +18,22 @@ public class MainTabActivity extends AppCompatActivity implements MainTabLayout.
 
         MainTabLayout mainTabLayout = (MainTabLayout) findViewById(R.id.main_tab_layout);
 
-        mainTabLayout.addItem(R.drawable.tab1, R.drawable.tab1_checked, R.string.button_style_3_text,
-                R.color.colorAccent, R.color.colorPrimaryDark);
-        mainTabLayout.addItem(R.drawable.tab1, R.drawable.tab1_checked, R.string.button_style_3_text,
-                R.color.colorAccent, R.color.colorPrimaryDark);
+        mainTabLayout.addItem(R.drawable.tab1,
+                R.drawable.tab1_checked,
+                R.string.button_style_3_text,
+                R.color.colorAccent,
+                R.color.colorPrimaryDark,
+                R.color.colorPrimaryDark,
+                R.color.colorAccent);
+
+        mainTabLayout.addItem(R.drawable.tab1,
+                R.drawable.tab1_checked,
+                R.string.button_style_3_text,
+                R.color.colorAccent,
+                R.color.colorPrimaryDark,
+                R.color.colorPrimaryDark,
+                R.color.colorAccent);
+
         mainTabLayout.setOnMainTabItemClickListener(this);
 
         mainTabLayout.clickItem(1);
