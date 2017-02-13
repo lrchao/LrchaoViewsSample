@@ -111,10 +111,11 @@ public class ToolbarActivity extends SwipeBackActivity implements OnNavigationCl
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        mDeleteBadgeActionProvider.setIcon(R.drawable.ab_edit);
-        mDeleteBadgeActionProvider.setTextBackground(R.drawable.circle_red);
+        //mDeleteBadgeActionProvider.setIcon(R.drawable.ab_edit);
+        mDeleteBadgeActionProvider.setText(R.string.action_edit);
+        mDeleteBadgeActionProvider.setCountTextBackground(R.drawable.circle_red);
         mPicBadgeActionProvider.setIcon(R.drawable.ab_android);
-        mPicBadgeActionProvider.setTextBackground(R.drawable.circle_red_1);
+        mPicBadgeActionProvider.setCountTextBackground(R.drawable.circle_red_1);
     }
 
     @Override

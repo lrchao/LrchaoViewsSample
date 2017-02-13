@@ -2,6 +2,7 @@ package com.lrchao.views.toolbar.action_provider;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.StringRes;
 import android.support.v4.view.ActionProvider;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,11 @@ public class IconCountActionProvider extends ActionProvider {
      * 未读数量
      */
     private TextView mTvCount;
+
+    /**
+     * 文字
+     */
+    private TextView mTvText;
 
     /**
      * 传入进来，为了区分点击标示的
@@ -63,6 +69,14 @@ public class IconCountActionProvider extends ActionProvider {
      */
     public void setIcon(@DrawableRes int icon) {
         mIvIcon.setImageResource(icon);
+        mIvIcon.setVisibility(View.VISIBLE);
+        mTvText.setVisibility(View.GONE);
+    }
+
+    public void setText(@StringRes int text) {
+        mTvText.setText(text);
+        mTvText.setVisibility(View.VISIBLE);
+        mIvIcon.setVisibility(View.GONE);
     }
 
     //================================================
@@ -86,7 +100,7 @@ public class IconCountActionProvider extends ActionProvider {
     /**
      * @param drawable 数字的背景
      */
-    public void setTextBackground(@DrawableRes int drawable) {
+    public void setCountTextBackground(@DrawableRes int drawable) {
         mTvCount.setBackgroundResource(drawable);
     }
 
@@ -98,6 +112,7 @@ public class IconCountActionProvider extends ActionProvider {
         view.setLayoutParams(layoutParams);
         mIvIcon = (ImageView) view.findViewById(R.id.iv_toolbar_action_icon);
         mTvCount = (TextView) view.findViewById(R.id.tv_toolbar_action_count);
+        mTvText =  (TextView) view.findViewById(R.id.tv_toolbar_action);
         view.setOnClickListener(mOnViewClickListener);
 
         setCount(0);
