@@ -88,6 +88,18 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
     }
 
     /**
+     * 设置导航的图标
+     *
+     * @param drawable 图标
+     */
+    public void setNavigationIcon(@DrawableRes int drawable) {
+        if (drawable > 0) {
+            mNavigationIcon = drawable;
+            mToolbar.setNavigationIcon(mNavigationIcon);
+        }
+    }
+
+    /**
      * @param listener OnNavigationClickListener
      */
     public void setOnNavigationClickListener(OnNavigationClickListener listener) {
@@ -120,7 +132,6 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
 
     /**
      * 更新标题的颜色
-     *
      */
     public void setCenterTitleColor(@ColorRes int color) {
         mCenterTitleColor = color /*= ResourceUtils.getColor(color)*/;
