@@ -15,8 +15,8 @@
         lrchaoBar:center_title_color="@color/colorAccent"
         lrchaoBar:center_title_size="@dimen/default_text_size"
         lrchaoBar:center_title_text="Toolbar11"
-        lrchaoBar:navigation_icon="@drawable/ab_share"
         />
+
 
     <LinearLayout
         android:layout_width="match_parent"

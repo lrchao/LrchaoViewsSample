@@ -96,6 +96,8 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
         if (drawable > 0) {
             mNavigationIcon = drawable;
             mToolbar.setNavigationIcon(mNavigationIcon);
+        } else {
+            mToolbar.setNavigationIcon(android.R.color.transparent);
         }
     }
 
@@ -152,11 +154,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
             appCompatActivity.setSupportActionBar(mToolbar);
         }
 
-        if (mNavigationIcon > 0) {
-            mToolbar.setNavigationIcon(mNavigationIcon);
-        }
-
-        mToolbar.setNavigationOnClickListener(this);
+        setNavigationIcon(mNavigationIcon);
 
         mToolbar.setBackgroundResource(mBackgroundColor);
 
