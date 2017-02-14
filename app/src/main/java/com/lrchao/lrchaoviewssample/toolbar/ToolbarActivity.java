@@ -51,7 +51,8 @@ public class ToolbarActivity extends SwipeBackActivity implements OnNavigationCl
 
         LrchaoToolBar jiaToolBar = (LrchaoToolBar) findViewById(R.id.toolbar);
         jiaToolBar.setOnNavigationClickListener(this);
-
+        jiaToolBar.setCenterTitleText("好的");
+        jiaToolBar.setCenterTitleColor(R.color.black);
         findViewById(R.id.add_single).setOnClickListener(onBtnClickListener);
         findViewById(R.id.add_double).setOnClickListener(onBtnClickListener);
 

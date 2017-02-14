@@ -2,6 +2,7 @@ package com.lrchao.views.toolbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
@@ -114,6 +115,15 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
      */
     public void setCenterTitleText(@StringRes int centerTitleText) {
         mCenterTitleText = ResourceUtils.getString(centerTitleText);
+        setupTvCenterTitle();
+    }
+
+    /**
+     * 更新标题的颜色
+     *
+     */
+    public void setCenterTitleColor(@ColorRes int color) {
+        mCenterTitleColor = color /*= ResourceUtils.getColor(color)*/;
         setupTvCenterTitle();
     }
 
