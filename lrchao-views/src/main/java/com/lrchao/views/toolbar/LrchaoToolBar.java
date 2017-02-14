@@ -154,8 +154,9 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
 
         if (mNavigationIcon > 0) {
             mToolbar.setNavigationIcon(mNavigationIcon);
-            mToolbar.setNavigationOnClickListener(this);
         }
+
+        mToolbar.setNavigationOnClickListener(this);
 
         mToolbar.setBackgroundResource(mBackgroundColor);
 
