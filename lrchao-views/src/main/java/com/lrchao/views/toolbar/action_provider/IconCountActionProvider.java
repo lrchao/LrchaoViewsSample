@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.view.ActionProvider;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,6 +80,16 @@ public class IconCountActionProvider extends ActionProvider {
         mIvIcon.setVisibility(View.GONE);
     }
 
+    public void setText(String text) {
+        if (TextUtils.isEmpty(text)) {
+            mTvText.setVisibility(View.GONE);
+        } else {
+            mTvText.setText(text);
+            mTvText.setVisibility(View.VISIBLE);
+        }
+        mIvIcon.setVisibility(View.GONE);
+    }
+
     //================================================
     // private
     //================================================
@@ -112,7 +123,7 @@ public class IconCountActionProvider extends ActionProvider {
         view.setLayoutParams(layoutParams);
         mIvIcon = (ImageView) view.findViewById(R.id.iv_toolbar_action_icon);
         mTvCount = (TextView) view.findViewById(R.id.tv_toolbar_action_count);
-        mTvText =  (TextView) view.findViewById(R.id.tv_toolbar_action);
+        mTvText = (TextView) view.findViewById(R.id.tv_toolbar_action);
         view.setOnClickListener(mOnViewClickListener);
 
         setCount(0);
