@@ -3,7 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 // This is the library version used when deploying the artifact
-version = "1.0.13"
+version = "1.0.14"
 
 android {
     compileSdkVersion 24
@@ -44,7 +44,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.lrchao:lrchao-utils:1.0.6'
+    compile 'com.lrchao:lrchao-utils:1.0.7'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
     compile 'me.iwf.photopicker:PhotoPicker:0.8.1@aar'
