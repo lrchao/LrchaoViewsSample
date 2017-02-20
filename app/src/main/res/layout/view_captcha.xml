@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_get_captcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:text="@string/login_get_captcha"
+        android:textColor="@color/yellow_F7AB00"
+        android:textSize="@dimen/font_normal"/>
+
+    <TextView
+        android:id="@+id/tv_captcha_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/yellow_F7AB00"
+        android:textSize="@dimen/font_normal"/>
+</LinearLayout>

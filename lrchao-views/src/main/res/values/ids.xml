@@ -20,4 +20,9 @@
     <item name="fix_gridview" type="id"/>
     <item name="iv_grid_item_icon" type="id"/>
     <item name="iv_grid_item_close" type="id"/>
+
+    <!-- text view -->
+    <item name="tv_get_captcha" type="id"/>
+    <item name="tv_captcha_countdown" type="id"/>
+
 </resources>

@@ -6,4 +6,6 @@
 
     <!-- 黑色 -->
     <color name="black">#333333</color>
+
+    <color name="yellow_F7AB00">#F7AB00</color> <!-- 文字的颜色 -->
 </resources>

@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".swipe.SwipeRefreshActivity">
         </activity>
+        <activity android:name=".textview.TextViewActivity">
+        </activity>
     </application>
 
 </manifest>

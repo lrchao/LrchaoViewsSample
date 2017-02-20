@@ -6,4 +6,6 @@
     <string name="hint_input_bottom_msg">请输入回复内容···</string>
 
     <string name="bottom_input_submit">提交</string>
+
+    <string name="login_captcha_counting">%1$d秒后重新发送</string>
 </resources>

@@ -11,6 +11,7 @@ import com.lrchao.lrchaoviewssample.progressbar.PageLoadingActivity;
 import com.lrchao.lrchaoviewssample.progressbar.ProgressbarActivity;
 import com.lrchao.lrchaoviewssample.swipe.SwipeRefreshActivity;
 import com.lrchao.lrchaoviewssample.tab.MainTabActivity;
+import com.lrchao.lrchaoviewssample.textview.TextViewActivity;
 import com.lrchao.lrchaoviewssample.toolbar.ToolbarActivity;
 import com.lrchao.lrchaoviewssample.webview.WebViewActivity;
 import com.lrchao.views.LrchaoViews;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_progressbar).setOnClickListener(this);
         findViewById(R.id.btn_page_loading).setOnClickListener(this);
         findViewById(R.id.btn_swipe_refresh).setOnClickListener(this);
-
+        findViewById(R.id.btn_text_view).setOnClickListener(this);
 
     }
 
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_swipe_refresh:
                 startActivity(new Intent(this, SwipeRefreshActivity.class));
+                break;
+            case R.id.btn_text_view:
+                startActivity(new Intent(this, TextViewActivity.class));
                 break;
             default:
                 break;
