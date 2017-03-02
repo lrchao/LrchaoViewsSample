@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
  * R.id.tv_get_captcha
  * R.id.tv_captcha_countdown;
  * mCaptchaTextView.startCountdown(); 开始倒计时
+ *
  * @author liuranchao
  * @date 16/3/29 下午5:35
  */
@@ -155,7 +156,7 @@ public class CaptchaTextView extends LinearLayout implements View.OnClickListene
         @Override
         public void onTick(long millisUntilFinished) {
             long seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished);
-            mTvCountdown.setText(ResourceUtils.getString(R.string.login_captcha_counting, seconds));
+            mTvCountdown.setText(Utils.getString(R.string.login_captcha_counting, seconds));
         }
 
         @Override

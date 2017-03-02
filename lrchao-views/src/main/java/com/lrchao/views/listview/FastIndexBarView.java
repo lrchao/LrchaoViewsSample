@@ -10,8 +10,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
 
 /**
@@ -80,7 +80,7 @@ public class FastIndexBarView extends View {
             mPaint.setTextSize(getResources().getDimension(R.dimen.index_bar_letter_text));
             // 选中的状态
             if (i == choose) {
-                mPaint.setColor(ResourceUtils.getColor(R.color.index_bar_letter_sel));
+                mPaint.setColor(Utils.getColor(R.color.index_bar_letter_sel));
                 mPaint.setFakeBoldText(true);
             }
             // x坐标等于中间-字符串宽度的一半.

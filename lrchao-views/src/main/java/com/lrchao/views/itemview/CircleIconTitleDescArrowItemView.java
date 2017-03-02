@@ -12,9 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 import com.lrchao.views.imageview.MyCircleImageView;
-
-import static com.lrchao.utils.DensityUtils.dip2px;
 
 
 /**
@@ -76,8 +75,8 @@ public class CircleIconTitleDescArrowItemView extends LinearLayout {
         setOrientation(HORIZONTAL);
         setBackgroundResource(android.R.color.white);
         setGravity(Gravity.CENTER_VERTICAL);
-        setPadding(dip2px(10), dip2px(10),
-                dip2px(10), dip2px(10));
+        setPadding(Utils.dip2px(10), Utils.dip2px(10),
+                Utils.dip2px(10), Utils.dip2px(10));
 
         mIvIcon = (MyCircleImageView) findViewById(R.id.iv_icon);
         mTvTitle = (TextView) findViewById(R.id.tv_title);

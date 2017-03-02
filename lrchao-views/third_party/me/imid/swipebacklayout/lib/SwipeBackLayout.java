@@ -305,8 +305,8 @@ public class SwipeBackLayout extends FrameLayout {
     /**
      * Set a drawable used for edge shadow.
      *
-     * @param shadow    Drawable to use
-     * @param edgeFlags Combination of edge flags describing the edge to set
+     * @param shadow   Drawable to use
+     * @param edgeFlag Combination of edge flags describing the edge to set
      * @see #EDGE_LEFT
      * @see #EDGE_RIGHT
      * @see #EDGE_BOTTOM
@@ -325,8 +325,8 @@ public class SwipeBackLayout extends FrameLayout {
     /**
      * Set a drawable used for edge shadow.
      *
-     * @param resId     Resource of drawable to use
-     * @param edgeFlags Combination of edge flags describing the edge to set
+     * @param resId    Resource of drawable to use
+     * @param edgeFlag Combination of edge flags describing the edge to set
      * @see #EDGE_LEFT
      * @see #EDGE_RIGHT
      * @see #EDGE_BOTTOM
@@ -366,8 +366,7 @@ public class SwipeBackLayout extends FrameLayout {
         try {
             return mDragHelper.shouldInterceptTouchEvent(event);
         } catch (ArrayIndexOutOfBoundsException e) {
-            // FIXME: handle exception
-            // issues #9
+            e.printStackTrace();
             return false;
         }
     }
@@ -551,7 +550,7 @@ public class SwipeBackLayout extends FrameLayout {
             if (mScrollPercent >= 1) {
                 if (!mActivity.isFinishing()) {
                     mActivity.finish();
-                    mActivity.overridePendingTransition(0, 0);        
+                    mActivity.overridePendingTransition(0, 0);
                 }
             }
         }

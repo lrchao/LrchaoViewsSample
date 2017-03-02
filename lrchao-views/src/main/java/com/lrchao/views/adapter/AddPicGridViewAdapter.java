@@ -6,12 +6,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.lrchao.utils.ImageUtils;
 import com.lrchao.views.R;
 import com.lrchao.views.gridview.OnClickAddPicGridAdapterListener;
 import com.lrchao.views.model.AddPicModel;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,26 +76,28 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
 
 
             if (model.isNormalView()) {
-                ImageUtils.display(new File(model.getFilePath()),
-                        viewHolder.mIvIcon,
-                        0,
-                        null,
-                        true,
-                        0,
-                        0,
-                        false,
-                        false);
+                //TODO
+//                ImageUtils.display(new File(model.getFilePath()),
+//                        viewHolder.mIvIcon,
+//                        0,
+//                        null,
+//                        true,
+//                        0,
+//                        0,
+//                        false,
+//                        false);
 
             } else if (model.isAddView()) {
-                ImageUtils.display(model.getAddViewResId(),
-                        viewHolder.mIvIcon,
-                        0,
-                        null,
-                        true,
-                        0,
-                        0,
-                        false,
-                        false);
+                //TODO
+//                ImageUtils.display(model.getAddViewResId(),
+//                        viewHolder.mIvIcon,
+//                        0,
+//                        null,
+//                        true,
+//                        0,
+//                        0,
+//                        false,
+//                        false);
             }
 
             viewHolder.mIvIcon.setOnClickListener(new View.OnClickListener() {

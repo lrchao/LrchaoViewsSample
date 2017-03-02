@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
 
 /**
@@ -110,7 +110,7 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
                          @ColorRes int bgColorChecked) {
         mIvIcon.setImageResource(iconNormal);
         mTvName.setText(text);
-        mTvName.setTextColor(ResourceUtils.getColor(textColorNormal));
+        mTvName.setTextColor(Utils.getColor(textColorNormal));
         mIconNormal = iconNormal;
         mIconChecked = iconChecked;
         mTextColorNormal = textColorNormal;
@@ -189,13 +189,13 @@ public class MainTabItemView extends RelativeLayout implements View.OnClickListe
 
     private void checkStatus() {
         mIvIcon.setImageResource(mIconChecked);
-        mTvName.setTextColor(ResourceUtils.getColor(mTextColorChecked));
+        mTvName.setTextColor(Utils.getColor(mTextColorChecked));
         setBackgroundResource(mBgColorChecked);
     }
 
     public void uncheckedStatus() {
         mIvIcon.setImageResource(mIconNormal);
-        mTvName.setTextColor(ResourceUtils.getColor(mTextColorNormal));
+        mTvName.setTextColor(Utils.getColor(mTextColorNormal));
         setBackgroundResource(mBgColorNormal);
     }
 

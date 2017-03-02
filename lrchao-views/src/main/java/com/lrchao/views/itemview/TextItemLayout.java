@@ -13,10 +13,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
-import static com.lrchao.utils.DensityUtils.dip2px;
+import static com.lrchao.views.Utils.dip2px;
 
 
 /**
@@ -113,7 +113,7 @@ public class TextItemLayout extends LinearLayout {
      * @param hintTextResId strings.xml
      */
     public void setHintText(@StringRes int hintTextResId) {
-        mHintText = ResourceUtils.getString(hintTextResId);
+        mHintText = Utils.getString(hintTextResId);
         showHintView();
     }
 
@@ -174,7 +174,7 @@ public class TextItemLayout extends LinearLayout {
      */
     public void setTitleColor(@ColorRes int color) {
         if (mTvTitle != null) {
-            mTvTitle.setTextColor(ResourceUtils.getColor(color));
+            mTvTitle.setTextColor(Utils.getColor(color));
         }
     }
 
@@ -250,7 +250,7 @@ public class TextItemLayout extends LinearLayout {
     private void setLeftMargin(View view, int margin) {
         if (view != null) {
             LayoutParams params = (LayoutParams) view.getLayoutParams();
-            params.setMargins(dip2px(margin), 0, 0, 0);
+            params.setMargins(Utils.dip2px(margin), 0, 0, 0);
             view.setLayoutParams(params);
 
         }
@@ -259,7 +259,7 @@ public class TextItemLayout extends LinearLayout {
     private void setRightMargin(View view, int margin) {
         if (view != null) {
             LayoutParams params = (LayoutParams) view.getLayoutParams();
-            params.setMargins(0, 0, dip2px(margin), 0);
+            params.setMargins(0, 0, Utils.dip2px(margin), 0);
             view.setLayoutParams(params);
 
         }

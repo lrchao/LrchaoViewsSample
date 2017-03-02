@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
 /**
  * Description: Toolbar View
@@ -130,7 +130,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
      * @param centerTitleText 标题
      */
     public void setCenterTitleText(@StringRes int centerTitleText) {
-        mCenterTitleText = ResourceUtils.getString(centerTitleText);
+        mCenterTitleText = Utils.getString(centerTitleText);
         setupTvCenterTitle();
     }
 
@@ -173,7 +173,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
     private void setupTvCenterTitle() {
         mTvCenterTitle.setText(mCenterTitleText);
         mTvCenterTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, mCenterTitleSize);
-        mTvCenterTitle.setTextColor(ResourceUtils.getColor(mCenterTitleColor));
+        mTvCenterTitle.setTextColor(Utils.getColor(mCenterTitleColor));
     }
 
 }

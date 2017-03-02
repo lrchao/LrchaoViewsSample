@@ -2,7 +2,6 @@ package com.lrchao.views;
 
 import android.content.Context;
 
-import com.lrchao.utils.LrchaoUtils;
 
 /**
  * Description: LrchaoViews 必须先初始化
@@ -36,7 +35,6 @@ public class LrchaoViews {
      */
     public void init(Context context) {
         mContext = context;
-        LrchaoUtils.getInstance().init(mContext);
     }
 
     public Context getContext() {

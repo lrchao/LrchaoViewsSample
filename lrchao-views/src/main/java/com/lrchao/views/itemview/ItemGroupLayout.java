@@ -5,14 +5,13 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.lrchao.views.Utils;
 import com.lrchao.views.dividerview.DividerLineView;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.lrchao.utils.DensityUtils.dip2px;
 
 
 /**
@@ -131,8 +130,8 @@ public class ItemGroupLayout extends LinearLayout {
 
     private View createDividerView() {
         DividerLineView viewDivider = new DividerLineView(getContext());
-        viewDivider.setMarginLeft(dip2px(mBottomLineLeftMargin));
-        viewDivider.setMarginRight(dip2px(mBottomLineRightMargin));
+        viewDivider.setMarginLeft(Utils.dip2px(mBottomLineLeftMargin));
+        viewDivider.setMarginRight(Utils.dip2px(mBottomLineRightMargin));
         viewDivider.setHeight(mBottomLineHeight);
 
         return viewDivider;

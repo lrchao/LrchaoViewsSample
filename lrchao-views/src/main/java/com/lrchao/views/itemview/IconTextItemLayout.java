@@ -10,8 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lrchao.views.R;
-
-import static com.lrchao.utils.DensityUtils.dip2px;
+import com.lrchao.views.Utils;
 
 
 /**
@@ -57,7 +56,7 @@ public final class IconTextItemLayout extends LinearLayout implements View.OnCli
      * dp
      */
     public void setCustomPadding(int left, int top, int right, int bottom) {
-        setPadding(dip2px(left), dip2px(top), dip2px(right), dip2px(bottom));
+        setPadding(Utils.dip2px(left), Utils.dip2px(top), Utils.dip2px(right), Utils.dip2px(bottom));
     }
 
     /**
@@ -67,8 +66,8 @@ public final class IconTextItemLayout extends LinearLayout implements View.OnCli
      */
     public void setIconSize(int size) {
         LayoutParams linearParams = (LayoutParams) mIvIcon.getLayoutParams();
-        linearParams.width = dip2px(size);
-        linearParams.height = dip2px(size);
+        linearParams.width = Utils.dip2px(size);
+        linearParams.height = Utils.dip2px(size);
         mIvIcon.setLayoutParams(linearParams); // 使设置好的布局参数应用到控件aaa
     }
 
@@ -76,7 +75,7 @@ public final class IconTextItemLayout extends LinearLayout implements View.OnCli
         LayoutInflater.from(context).inflate(R.layout.itemview_icon_text, this);
         setOrientation(HORIZONTAL);
         setBackgroundResource(android.R.color.white);
-        int paddingValue = dip2px(10);
+        int paddingValue = Utils.dip2px(10);
         setPadding(paddingValue, paddingValue, paddingValue, paddingValue);
         setGravity(Gravity.CENTER_VERTICAL);
 

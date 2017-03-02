@@ -21,9 +21,8 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.lrchao.utils.DensityUtils;
-import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
 
 /**
@@ -36,7 +35,7 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
     private int mMarginLeft;
 
     public ListViewDecoration(int marginLeft) {
-        mDrawable = ResourceUtils.getDrawable(R.drawable.divider_recycler);
+        mDrawable = Utils.getDrawable(R.drawable.divider_recycler);
         mMarginLeft = marginLeft;
     }
 
@@ -44,7 +43,7 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
     public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
         int left = parent.getPaddingLeft();
         if (mMarginLeft > 0) {
-            left = DensityUtils.dip2px(mMarginLeft);
+            left = Utils.dip2px(mMarginLeft);
         }
         final int right = parent.getWidth() - parent.getPaddingRight();
 

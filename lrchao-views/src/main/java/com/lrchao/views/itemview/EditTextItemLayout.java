@@ -14,11 +14,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
-import com.lrchao.utils.SoftKeyboardUtils;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 
-import static com.lrchao.utils.DensityUtils.dip2px;
+import static com.lrchao.views.Utils.dip2px;
 
 
 /**
@@ -99,7 +98,7 @@ public class EditTextItemLayout extends LinearLayout implements TextWatcher {
      * 显示软键盘
      */
     public void showSoftKeyboard() {
-        SoftKeyboardUtils.showDelay(mEtContent, getContext());
+        Utils.showDelay(mEtContent, getContext());
     }
 
     /**
@@ -143,13 +142,13 @@ public class EditTextItemLayout extends LinearLayout implements TextWatcher {
 
     public void setTitleTextColor(@ColorRes int color) {
         if (mTvTitle != null) {
-            mTvTitle.setTextColor(ResourceUtils.getColor(color));
+            mTvTitle.setTextColor(Utils.getColor(color));
         }
     }
 
     public void setHintTextColor(@ColorRes int color) {
         if (mEtContent != null) {
-            mEtContent.setHintTextColor(ResourceUtils.getColor(color));
+            mEtContent.setHintTextColor(Utils.getColor(color));
         }
     }
 
@@ -161,7 +160,7 @@ public class EditTextItemLayout extends LinearLayout implements TextWatcher {
 
     public void setContentTextColor(@ColorRes int color) {
         if (mEtContent != null) {
-            mEtContent.setTextColor(ResourceUtils.getColor(color));
+            mEtContent.setTextColor(Utils.getColor(color));
         }
     }
 

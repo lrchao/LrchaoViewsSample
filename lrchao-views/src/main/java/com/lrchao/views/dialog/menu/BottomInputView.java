@@ -12,10 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lrchao.utils.ResourceUtils;
-import com.lrchao.utils.SoftKeyboardUtils;
 import com.lrchao.views.LrchaoViews;
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 import com.lrchao.views.gridview.add_pic.AddPicGridView;
 
 import java.util.List;
@@ -119,7 +118,7 @@ public class BottomInputView extends LinearLayout implements TextWatcher, View.O
         mIvAddPic.setOnClickListener(this);
 
         bindTitleView("");
-        bindEditTextView(ResourceUtils.getString(R.string.hint_input_bottom_msg));
+        bindEditTextView(Utils.getString(R.string.hint_input_bottom_msg));
         bindAddPicView(true);
         bindSubmitUnClickableView();
         bindNotShowAddPicView();
@@ -211,7 +210,7 @@ public class BottomInputView extends LinearLayout implements TextWatcher, View.O
         mIvAddPic.setBackgroundResource(R.drawable.bottom_view_add_pic_show);
         mAddPicGridView.setVisibility(View.VISIBLE);
         mIsShowAddPic = true;
-        SoftKeyboardUtils.hideKeyboard(LrchaoViews.getInstance().getContext(), mEtComment);
+        Utils.hideKeyboard(LrchaoViews.getInstance().getContext(), mEtComment);
     }
 
 

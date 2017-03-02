@@ -11,9 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lrchao.views.R;
+import com.lrchao.views.Utils;
 import com.lrchao.views.imageview.MyCircleImageView;
-
-import static com.lrchao.utils.DensityUtils.dip2px;
 
 
 /**
@@ -95,8 +94,8 @@ public class EditIconItemLayout extends LinearLayout implements View.OnClickList
 
         setOrientation(HORIZONTAL);
         setBackgroundResource(android.R.color.white);
-        int paddingTopBottomValue = dip2px(10);
-        int paddingLeftRightValue = dip2px(15);
+        int paddingTopBottomValue = Utils.dip2px(10);
+        int paddingLeftRightValue = Utils.dip2px(15);
         setPadding(paddingLeftRightValue, paddingTopBottomValue, paddingLeftRightValue, paddingTopBottomValue);
         setGravity(Gravity.CENTER_VERTICAL);
 
