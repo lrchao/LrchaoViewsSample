@@ -50,6 +50,8 @@ public class AddPicGridView extends LinearLayout implements OnClickAddPicGridAda
      */
     private int mMaxCount;
 
+    private AddPicGridViewAdapter.OnDisplayImageListener mOnDisplayImageListener;
+
     //======================================================
     // public
     //======================================================
@@ -86,6 +88,11 @@ public class AddPicGridView extends LinearLayout implements OnClickAddPicGridAda
     public final void setAddViewRes(@DrawableRes int drawableResId) {
         mAddViewResId = drawableResId;
         mAdapter.add(createAddPicData(drawableResId));
+    }
+
+    public void setOnDisplayImageListener(AddPicGridViewAdapter.OnDisplayImageListener onDisplayImageListener) {
+        mAdapter.setOnDisplayImageListener(onDisplayImageListener);
+        mOnDisplayImageListener = onDisplayImageListener;
     }
 
     public boolean isHasAddView() {

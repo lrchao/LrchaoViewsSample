@@ -10,6 +10,7 @@ import com.lrchao.views.R;
 import com.lrchao.views.gridview.OnClickAddPicGridAdapterListener;
 import com.lrchao.views.model.AddPicModel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,12 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
     private int mItemLayoutId;
 
     private OnClickAddPicGridAdapterListener mOnClickAddPicGridAdapterListener;
+
+    private OnDisplayImageListener mOnDisplayImageListener;
+
+    public void setOnDisplayImageListener(OnDisplayImageListener onDisplayImageListener) {
+        mOnDisplayImageListener = onDisplayImageListener;
+    }
 
     public AddPicGridViewAdapter(Context context, List dataSource) {
         super(context, dataSource);
@@ -74,9 +81,10 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
         AddPicViewHolder viewHolder = (AddPicViewHolder) holder;
         if (model != null) {
 
-
-            if (model.isNormalView()) {
-                //TODO
+            if (mOnDisplayImageListener != null) {
+                if (model.isNormalView()) {
+                    mOnDisplayImageListener.displayImage(new File(model.getFilePath()), viewHolder.mIvIcon);
+                    //TODO
 //                ImageUtils.display(new File(model.getFilePath()),
 //                        viewHolder.mIvIcon,
 //                        0,
@@ -87,8 +95,10 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
 //                        false,
 //                        false);
 
-            } else if (model.isAddView()) {
-                //TODO
+                } else if (model.isAddView()) {
+
+                    mOnDisplayImageListener.displayImage(model.getAddViewResId(), viewHolder.mIvIcon);
+                    //TODO
 //                ImageUtils.display(model.getAddViewResId(),
 //                        viewHolder.mIvIcon,
 //                        0,
@@ -98,7 +108,9 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
 //                        0,
 //                        false,
 //                        false);
+                }
             }
+
 
             viewHolder.mIvIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -137,5 +149,11 @@ public class AddPicGridViewAdapter extends BaseNormalAdapter<AddPicModel> {
     static class AddPicViewHolder implements BaseNormalViewHolder {
         ImageView mIvIcon;
         ImageView mIvClose;
+    }
+
+    public interface OnDisplayImageListener{
+        void displayImage(File file, ImageView ivIcon);
+        void displayImage(int resId, ImageView ivIcon);
+
     }
 }
