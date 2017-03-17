@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.lrchao.views.R;
 
+import static com.lrchao.views.R.id.tv_footer;
+
 
 /**
  * Description: RecycleView的footer view
@@ -42,7 +44,11 @@ public class ListFooterView extends RelativeLayout {
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.list_footer, this);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_footer);
-        mTvContent = (TextView) findViewById(R.id.tv_footer);
+        mTvContent = (TextView) findViewById(tv_footer);
+    }
+
+    public void setNoMoreDataText(String text) {
+        mTvContent.setText(text);
     }
 
     /**
