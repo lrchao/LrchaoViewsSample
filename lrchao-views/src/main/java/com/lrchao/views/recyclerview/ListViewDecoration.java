@@ -34,9 +34,12 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
 
     private int mMarginLeft;
 
-    public ListViewDecoration(int marginLeft) {
+    private int mMarginRight;
+
+    public ListViewDecoration(int marginLeft, int marginRight) {
         mDrawable = Utils.getDrawable(R.drawable.divider_recycler);
         mMarginLeft = marginLeft;
+        mMarginRight = marginRight;
     }
 
     @Override
@@ -45,7 +48,11 @@ public class ListViewDecoration extends RecyclerView.ItemDecoration {
         if (mMarginLeft > 0) {
             left = Utils.dip2px(mMarginLeft);
         }
-        final int right = parent.getWidth() - parent.getPaddingRight();
+        int right = parent.getWidth() - parent.getPaddingRight();
+        if (mMarginRight > 0) {
+            right = Utils.dip2px(mMarginRight);
+        }
+
 
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount - 1; i++) {
