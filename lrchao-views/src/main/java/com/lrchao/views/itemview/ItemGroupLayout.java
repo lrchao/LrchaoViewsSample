@@ -30,7 +30,7 @@ public class ItemGroupLayout extends LinearLayout {
     /**
      * 底部线的左边边距
      */
-    private int mBottomLineLeftMargin = 62;
+    private int mBottomLineLeftMargin = 0;
 
     /**
      * 底部线的左边边距
