@@ -110,6 +110,14 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
         mOnNavigationClickListener = listener;
     }
 
+    /**
+     * 设置背景
+     */
+    public void setBg(@ColorRes  int colorRes) {
+        mBackgroundColor = colorRes;
+        mToolbar.setBackgroundResource(mBackgroundColor);
+    }
+
     //=============================================
     // private
     //=============================================
