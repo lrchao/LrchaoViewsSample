@@ -8,6 +8,7 @@ import android.view.View;
 import com.lrchao.lrchaoviewssample.gridview.GridViewActivity;
 import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.itemview.ItemViewActivity;
+import com.lrchao.lrchaoviewssample.popupwindow.PopupWindowActivity;
 import com.lrchao.lrchaoviewssample.progressbar.PageLoadingActivity;
 import com.lrchao.lrchaoviewssample.progressbar.ProgressbarActivity;
 import com.lrchao.lrchaoviewssample.swipe.SwipeRefreshActivity;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_swipe_refresh).setOnClickListener(this);
         findViewById(R.id.btn_text_view).setOnClickListener(this);
         findViewById(R.id.btn_grid_view).setOnClickListener(this);
+        findViewById(R.id.btn_popupwindow).setOnClickListener(this);
+
     }
 
     @Override
@@ -69,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_grid_view:
                 startActivity(new Intent(this, GridViewActivity.class));
+                break;
+            case R.id.btn_popupwindow:
+                startActivity(new Intent(this, PopupWindowActivity.class));
                 break;
             default:
                 break;

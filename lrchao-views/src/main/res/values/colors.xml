@@ -37,5 +37,9 @@
     <!-- 白色 -->
     <color name="white">#FFFFFF</color>
 
+    <!-- 半透明 -->
+    <color name="half_transparent">#70000000</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
 
 </resources>
