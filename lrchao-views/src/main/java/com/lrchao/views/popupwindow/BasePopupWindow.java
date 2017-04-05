@@ -19,10 +19,11 @@ import com.lrchao.views.R;
 
 public abstract class BasePopupWindow extends PopupWindow {
 
+    protected Context mContext;
 
     public BasePopupWindow(Context context) {
         super(context);
-
+        mContext = context;
         View view = LayoutInflater.from(context).inflate(R.layout.popup_window_base, null);
 
         ViewGroup parentView = (ViewGroup) view.findViewById(R.id.pop_parent);
