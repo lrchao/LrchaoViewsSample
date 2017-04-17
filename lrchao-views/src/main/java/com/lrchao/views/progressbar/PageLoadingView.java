@@ -71,6 +71,7 @@ public class PageLoadingView extends RelativeLayout implements
     public void showLoading() {
         mPbLoading.setVisibility(View.VISIBLE);
         mPageLoadingResultView.setVisibility(View.GONE);
+        mCustomContainerView.setVisibility(View.GONE);
         setVisibility(View.VISIBLE);
 
     }
@@ -91,6 +92,8 @@ public class PageLoadingView extends RelativeLayout implements
 
     public void show(String tvText, String btnText) {
         mPbLoading.setVisibility(View.GONE);
+        mPageLoadingResultView.setVisibility(View.VISIBLE);
+        mCustomContainerView.setVisibility(View.GONE);
         mPageLoadingResultView.show(tvText, btnText);
         setVisibility(View.VISIBLE);
     }
