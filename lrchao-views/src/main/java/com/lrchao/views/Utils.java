@@ -1,6 +1,7 @@
 package com.lrchao.views;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -13,12 +14,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.lrchao.views.activity.PhotoPickerActivity;
+import com.lrchao.views.photo.PhotoPickerActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import me.iwf.photopicker.PhotoPagerActivity;
+import me.iwf.photopicker.PhotoPreview;
 
 /**
  * Description: 工具类
@@ -70,13 +70,12 @@ public final class Utils {
     /**
      * 跳转到图片查看的页面
      */
-    public static void navToPhotoPreviewActivity(int position, List<String> photoList) {
-        Context context = LrchaoViews.getInstance().getContext();
-        Intent intent = new Intent(context, PhotoPagerActivity.class);
-        intent.putExtra(PhotoPagerActivity.EXTRA_CURRENT_ITEM, position);
-        intent.putExtra(PhotoPagerActivity.EXTRA_PHOTOS, (ArrayList) photoList);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+    public static void navToPhotoPreviewActivity(Activity context, int position, ArrayList<String> photoList) {
+        PhotoPreview.builder()
+                .setPhotos(photoList)
+                .setCurrentItem(position)
+                .setShowDeleteButton(false)
+                .start(context);
     }
 
     /**

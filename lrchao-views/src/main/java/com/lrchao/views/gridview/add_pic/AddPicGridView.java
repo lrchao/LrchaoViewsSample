@@ -1,5 +1,6 @@
 package com.lrchao.views.gridview.add_pic;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -49,6 +50,8 @@ public class AddPicGridView extends LinearLayout implements OnClickAddPicGridAda
      * 最多个个数
      */
     private int mMaxCount;
+
+    private Context mContext;
 
     private AddPicGridViewAdapter.OnDisplayImageListener mOnDisplayImageListener;
 
@@ -146,6 +149,7 @@ public class AddPicGridView extends LinearLayout implements OnClickAddPicGridAda
     }
 
     private void init(Context context) {
+        mContext = context;
         LayoutInflater.from(context).inflate(R.layout.gridview_add_pic, this);
         setOrientation(VERTICAL);
         setBackgroundResource(android.R.color.white);
@@ -174,7 +178,7 @@ public class AddPicGridView extends LinearLayout implements OnClickAddPicGridAda
     @Override
     public void onClickPic(String filePath) {
         int position = mAdapter.getFilePathList().indexOf(filePath);
-        Utils.navToPhotoPreviewActivity(position, mAdapter.getFilePathList());
+        Utils.navToPhotoPreviewActivity((Activity) mContext, position, (ArrayList<String>) mAdapter.getFilePathList());
     }
 
     @Override

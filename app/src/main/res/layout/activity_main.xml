@@ -99,5 +99,13 @@
             android:text="PopupWindow"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photo"
+            android:textAllCaps="false"/>
+
+
     </LinearLayout>
 </ScrollView>

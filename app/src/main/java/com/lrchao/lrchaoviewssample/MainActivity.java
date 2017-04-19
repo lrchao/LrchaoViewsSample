@@ -8,6 +8,7 @@ import android.view.View;
 import com.lrchao.lrchaoviewssample.gridview.GridViewActivity;
 import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.itemview.ItemViewActivity;
+import com.lrchao.lrchaoviewssample.photo.PhotoActivity;
 import com.lrchao.lrchaoviewssample.popupwindow.PopupWindowActivity;
 import com.lrchao.lrchaoviewssample.progressbar.PageLoadingActivity;
 import com.lrchao.lrchaoviewssample.progressbar.ProgressbarActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_text_view).setOnClickListener(this);
         findViewById(R.id.btn_grid_view).setOnClickListener(this);
         findViewById(R.id.btn_popupwindow).setOnClickListener(this);
+        findViewById(R.id.btn_photo).setOnClickListener(this);
 
     }
 
@@ -76,6 +78,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_popupwindow:
                 startActivity(new Intent(this, PopupWindowActivity.class));
                 break;
+            case R.id.btn_photo:
+                startActivity(new Intent(this, PhotoActivity.class));
+                break;
+
             default:
                 break;
         }

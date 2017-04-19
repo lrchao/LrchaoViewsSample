@@ -1,4 +1,4 @@
-package com.lrchao.views.activity;
+package com.lrchao.views.photo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,7 +12,7 @@ import com.lrchao.views.BundleKey;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.iwf.photopicker.utils.PhotoPickerIntent;
+import me.iwf.photopicker.PhotoPicker;
 
 
 /**
@@ -23,8 +23,6 @@ import me.iwf.photopicker.utils.PhotoPickerIntent;
  */
 
 public class PhotoPickerActivity extends Activity {
-
-    private static final int REQUEST_CODE = 1;
 
     public static Intent getCallingIntent(Context context, int count) {
         Intent intent = new Intent(context, PhotoPickerActivity.class);
@@ -42,20 +40,25 @@ public class PhotoPickerActivity extends Activity {
     }
 
     private void startPhotoPickerIntent(int photoCount) {
-        PhotoPickerIntent intent = new PhotoPickerIntent(this);
-        intent.setPhotoCount(photoCount);
-        intent.setShowCamera(true);
-        startActivityForResult(intent, REQUEST_CODE);
+
+        PhotoPicker.builder()
+                .setPhotoCount(photoCount)
+                .setShowCamera(true)
+                .setShowGif(true)
+                .setPreviewEnabled(false)
+                .start(this, PhotoPicker.REQUEST_CODE);
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE && data != null) {
-            List<String> photos = data.getStringArrayListExtra(me.iwf.photopicker.PhotoPickerActivity.KEY_SELECTED_PHOTOS);
-            if (photos != null && photos.size() > 0) {
-                sendBroadcastForResult(photos);
 
+        if (resultCode == RESULT_OK && requestCode == PhotoPicker.REQUEST_CODE) {
+            if (data != null) {
+                ArrayList<String> photos =
+                        data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS);
+                sendBroadcastForResult(photos);
             }
         }
 

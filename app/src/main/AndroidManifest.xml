@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".popupwindow.PopupWindowActivity">
         </activity>
+        <activity android:name=".photo.PhotoActivity">
+        </activity>
     </application>
 
 </manifest>
