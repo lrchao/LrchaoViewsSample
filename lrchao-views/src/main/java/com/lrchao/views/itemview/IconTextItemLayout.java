@@ -29,6 +29,8 @@ public final class IconTextItemLayout extends LinearLayout implements View.OnCli
 
     public ImageView mIvIcon;
 
+    public ImageView mIvArrow;
+
     private OnIconTextItemLayoutClickListener mOnIconTextItemLayoutClickListener;
 
     public IconTextItemLayout(Context context) {
@@ -81,6 +83,7 @@ public final class IconTextItemLayout extends LinearLayout implements View.OnCli
 
         mTvTitle = (TextView) findViewById(R.id.tv_title);
         mIvIcon = (ImageView) findViewById(R.id.iv_icon);
+        mIvArrow = (ImageView) findViewById(R.id.iv_arrow_right);
 
         setOnClickListener(this);
     }
