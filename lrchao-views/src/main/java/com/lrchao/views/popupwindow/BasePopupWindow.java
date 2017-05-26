@@ -31,7 +31,11 @@ public abstract class BasePopupWindow extends PopupWindow {
         parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BasePopupWindow.this.dismiss();
+
+                if (isCanClickAutoDismiss()) {
+                    BasePopupWindow.this.dismiss();
+                }
+
             }
         });
 
@@ -40,11 +44,38 @@ public abstract class BasePopupWindow extends PopupWindow {
 
         initView(view);
         setContentView(view);
-        setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
-        setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
-        setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.half_transparent)));
-        setOutsideTouchable(true);
-        setFocusable(true);
+
+        if (isMatchParent()) {
+            setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+            setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
+        }
+
+        if (isHalfTransparentBg()) {
+            setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.half_transparent)));
+        }
+
+        setOutsideTouchable(isCanOutsideTouch());
+        setFocusable(isCanFocusable());
+    }
+
+    private boolean isCanClickAutoDismiss() {
+        return true;
+    }
+
+    private boolean isCanFocusable() {
+        return true;
+    }
+
+    private boolean isCanOutsideTouch() {
+        return true;
+    }
+
+    private boolean isMatchParent() {
+        return true;
+    }
+
+    private boolean isHalfTransparentBg() {
+        return true;
     }
 
     protected abstract void initView(View view);
