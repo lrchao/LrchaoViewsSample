@@ -45,6 +45,10 @@ public abstract class BasePopupWindow extends PopupWindow {
         initView(view);
         setContentView(view);
 
+        if (isAutoTransparent()) {
+            view.setBackgroundResource(R.color.transparent);
+        }
+
         if (isMatchParent()) {
             setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
             setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
@@ -58,23 +62,27 @@ public abstract class BasePopupWindow extends PopupWindow {
         setFocusable(isCanFocusable());
     }
 
-    private boolean isCanClickAutoDismiss() {
+    protected boolean isAutoTransparent() {
         return true;
     }
 
-    private boolean isCanFocusable() {
+    protected boolean isCanClickAutoDismiss() {
         return true;
     }
 
-    private boolean isCanOutsideTouch() {
+    protected boolean isCanFocusable() {
         return true;
     }
 
-    private boolean isMatchParent() {
+    protected boolean isCanOutsideTouch() {
         return true;
     }
 
-    private boolean isHalfTransparentBg() {
+    protected boolean isMatchParent() {
+        return true;
+    }
+
+    protected boolean isHalfTransparentBg() {
         return true;
     }
 
