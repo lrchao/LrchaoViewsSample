@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.lrchao.lrchaoviewssample.edittext.TextInputLayoutActivity;
 import com.lrchao.lrchaoviewssample.gridview.GridViewActivity;
 import com.lrchao.lrchaoviewssample.imageview.ImageViewActivity;
 import com.lrchao.lrchaoviewssample.itemview.ItemViewActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_grid_view).setOnClickListener(this);
         findViewById(R.id.btn_popupwindow).setOnClickListener(this);
         findViewById(R.id.btn_photo).setOnClickListener(this);
+        findViewById(R.id.btn_text_input_layout).setOnClickListener(this);
 
     }
 
@@ -80,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_photo:
                 startActivity(new Intent(this, PhotoActivity.class));
+                break;
+            case R.id.btn_text_input_layout:
+                startActivity(new Intent(this, TextInputLayoutActivity.class));
                 break;
 
             default:

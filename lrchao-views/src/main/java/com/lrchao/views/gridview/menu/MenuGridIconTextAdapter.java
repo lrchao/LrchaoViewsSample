@@ -35,8 +35,15 @@ public class MenuGridIconTextAdapter extends LrchaoGridAdapter {
 
         MenuGridIconTextVH vh = (MenuGridIconTextVH) holder;
         if (model != null) {
-            vh.mTvTitle.setText(model.getTitle());
-            vh.mIvIcon.setBackgroundResource(model.getIcon());
+
+            if (vh.mTvTitle != null) {
+                vh.mTvTitle.setText(model.getTitle());
+            }
+
+            if (vh.mIvIcon != null) {
+                vh.mIvIcon.setBackgroundResource(model.getIcon());
+            }
+
         }
     }
 
