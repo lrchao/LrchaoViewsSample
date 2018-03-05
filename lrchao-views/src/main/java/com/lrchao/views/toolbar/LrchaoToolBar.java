@@ -29,6 +29,8 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
 
     private static final String TAG = "LrchaoToolBar";
 
+    private Context mContext;
+
     private Toolbar mToolbar;
 
     /**
@@ -63,6 +65,11 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
     private int mBackgroundColor;
 
     /**
+     * 标题的样式
+     */
+    private int mTitleTextAppearance;
+
+    /**
      * 导航接口
      */
     private OnNavigationClickListener mOnNavigationClickListener;
@@ -74,6 +81,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
 
     public LrchaoToolBar(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LrchaoToolBar);
 
         if (a != null) {
@@ -82,9 +90,31 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
             mCenterTitleSize = a.getDimensionPixelSize(R.styleable.LrchaoToolBar_center_title_size, 0);
             mCenterTitleColor = a.getResourceId(R.styleable.LrchaoToolBar_center_title_color, android.R.color.black);
             mBackgroundColor = a.getResourceId(R.styleable.LrchaoToolBar_background_color, android.R.color.white);
+            mTitleTextAppearance = a.getResourceId(R.styleable.LrchaoToolBar_title_text_appearance, 0);
             a.recycle();
         }
         init(context);
+    }
+
+    /**
+     *  Toolbar的标题颜色,和setTitleTextAppearance冲突，并setTitleTextAppearance为准
+     */
+    public void setTitleTextColor(int color) {
+        mToolbar.setTitleTextColor(color);
+    }
+
+    /**
+     * 设置标题
+     */
+    public void setTitle(String s) {
+        mToolbar.setTitle(s);
+    }
+
+    /**
+     *  设置title样式
+     */
+    public void  setTitleTextAppearance(int resId) {
+        mToolbar.setTitleTextAppearance(mContext, resId);
     }
 
     /**
@@ -167,7 +197,7 @@ public class LrchaoToolBar extends LinearLayout implements View.OnClickListener 
         setNavigationIcon(mNavigationIcon);
 
         mToolbar.setBackgroundResource(mBackgroundColor);
-
+        mToolbar.setTitleTextAppearance(context, mTitleTextAppearance);
         setupTvCenterTitle();
     }
 

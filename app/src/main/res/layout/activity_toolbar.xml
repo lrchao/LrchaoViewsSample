@@ -15,6 +15,7 @@
         lrchaoBar:center_title_color="@color/colorAccent"
         lrchaoBar:center_title_size="@dimen/default_text_size"
         lrchaoBar:center_title_text="Toolbar11"
+        lrchaoBar:title_text_appearance="@style/ToolbarTitle"
         />
 
 

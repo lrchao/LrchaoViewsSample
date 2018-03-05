@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lrchao.lrchaoviewssample.R;
+import com.lrchao.utils.ResourceUtils;
 import com.lrchao.views.statusbar.StatusBarUtil;
 import com.lrchao.views.toolbar.LrchaoToolBar;
 import com.lrchao.views.toolbar.OnNavigationClickListener;
@@ -56,6 +57,10 @@ public class ToolbarActivity extends SwipeBackActivity implements OnNavigationCl
         jiaToolBar.setCenterTitleText("好的");
         jiaToolBar.setNavigationIcon(0);
         jiaToolBar.setCenterTitleColor(R.color.black);
+        jiaToolBar.setTitle("得到的");
+        //jiaToolBar.setTitleTextAppearance(R.style.ToolbarTitle);
+        jiaToolBar.setTitleTextColor(ResourceUtils.getColor(R.color.white));
+
         findViewById(R.id.add_single).setOnClickListener(onBtnClickListener);
         findViewById(R.id.add_double).setOnClickListener(onBtnClickListener);
 

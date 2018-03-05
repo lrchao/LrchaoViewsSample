@@ -8,6 +8,7 @@
         <attr name="center_title_size" format="dimension"/>
         <attr name="center_title_color" format="color"/>
         <attr name="background_color" format="reference"/>
+        <attr name="title_text_appearance" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="SwipeBackLayout">
